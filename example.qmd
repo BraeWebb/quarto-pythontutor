@@ -57,6 +57,6 @@ def foo(x, y):
 ## Todo list
 
 - [ ] Fix the strange rendering of arrows
-- [ ] Fix the strange rendering of the step slider (some sort of cursor above the buttons)
+- [X] Fix the strange rendering of the step slider (some sort of cursor above the buttons)
 - [ ] Style it nicely (ugly HTML default buttons!)
 - [ ] Fix strange rendering of line arrows (does it rely on absolute positioning?)

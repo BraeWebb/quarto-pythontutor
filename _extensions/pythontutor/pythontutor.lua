@@ -11,8 +11,9 @@ function includePythonTutorDeps(base)
   quarto.doc.add_html_dependency({
     name = "pythontutor",
     version = "1.0.0",
-    scripts = {"html/js/d3.v2.min.js", "html/js/jquery-1.8.2.min.js", "html/js/jquery-ui-1.11.4", "html/js/jquery-ui-1.11.4/jquery-ui.css", "html/js/jquery-ui-1.11.4/jquery-ui.min.js", "html/js/jquery.ba-bbq.min.js", "html/js/jquery.jsPlumb-1.3.10-all-min.js", "html/js/jquery.simplemodal.js", "html/js/pytutor.js"},
-    stylesheets = {"html/css/basic.css", "html/css/pytutor.css"},
+    scripts = {"html/js/d3.v2.min.js", "html/js/jquery-1.8.2.min.js", "html/js/jquery-ui-1.11.4/jquery-ui.min.js", "html/js/jquery.ba-bbq.min.js", "html/js/jquery.jsPlumb-1.3.10-all-min.js", "html/js/jquery.simplemodal.js", "html/js/pytutor.js"},
+    stylesheets = {"html/css/basic.css", "html/css/pytutor.css", "html/js/jquery-ui-1.11.4/jquery-ui.css"},
+    resources = {"html/js/images/ui-bg_glass_100_f6f6f6_1x400.png","html/js/images/ui-bg_highlight-soft_100_eeeeee_1x100.png","html/js/images/ui-icons_222222_256x240.png"}
   })
 end
 
