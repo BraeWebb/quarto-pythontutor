@@ -1,0 +1,38 @@
+---
+title: "PythonTutor"
+format: revealjs
+jupyter: python3
+filters:
+  - pythontutor
+---
+
+Example of executing PythonTutor using Quarto below.
+
+```{pythontutor}
+def foo(x, y):
+    if not x:
+        return 0
+    z = x-1
+    return x + foo(z, y)
+
+foo(2,3)
+```
+
+## Another program
+
+
+```{pythontutor}
+def foo(x, y):
+  return x * y
+
+foo(2,3)
+```
+
+This is just to ensure that two programs can co-exist.
+
+## Todo list
+
+- [ ] Fix the strange rendering of arrows
+- [ ] Fix the strange rendering of the step slider (some sort of cursor above the buttons)
+- [ ] Style it nicely (ugly HTML default buttons!)
+- [ ] Fix strange rendering of line arrows (does it rely on absolute positioning?)
