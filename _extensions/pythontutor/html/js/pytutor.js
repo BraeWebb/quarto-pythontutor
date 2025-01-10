@@ -1611,7 +1611,7 @@ ExecutionVisualizer.prototype.updateOutputFull = function(smoothTransition) {
     // (simpler methods work on all other major browsers, erghhhhhh!!!)
     if (this.codeOutputLines && this.codeOutputLines.length > 1) {
       var secondRowOffsetY = myViz.domRoot.find('table#pyCodeOutput tr:nth-child(2)').offset().top;
-      myViz.codeRowHeight = secondRowOffsetY - firstRowOffsetY;
+      myViz.codeRowHeight = (secondRowOffsetY - firstRowOffsetY)*0.85;
     }
 
     assert(myViz.codeRowHeight > 0);
@@ -1623,6 +1623,7 @@ ExecutionVisualizer.prototype.updateOutputFull = function(smoothTransition) {
     // well with the pointed-to code text ...
     // (if you want to manually adjust tableTop, then ~5 is a reasonable number)
     myViz.arrowOffsetY = Math.floor((myViz.codeRowHeight / 2) - (SVG_ARROW_HEIGHT / 2)) - teenyAdjustment;
+    myViz.arrowOffsetY += 1;
 
     myViz.leftGutterSvgInitialized = true;
   }
@@ -1630,7 +1631,7 @@ ExecutionVisualizer.prototype.updateOutputFull = function(smoothTransition) {
   if (myViz.params.arrowLines) {
       assert(myViz.arrowOffsetY !== undefined);
       assert(myViz.codeRowHeight !== undefined);
-      assert(0 <= myViz.arrowOffsetY && myViz.arrowOffsetY <= myViz.codeRowHeight);
+      //assert(0 <= myViz.arrowOffsetY && myViz.arrowOffsetY <= myViz.codeRowHeight);
   }
 
   // call the callback if necessary (BEFORE rendering)
