@@ -30,6 +30,30 @@ foo(2,3)
 
 This is just to ensure that two programs can co-exist.
 
+## How to use
+
+1. Install the filter using Quarto CLI
+```bash
+quarto add BraeWebb/quarto-pythontutor
+```
+
+2. Add the filter to your document
+```yaml
+filters:
+  - pythontutor
+```
+
+3. Use the filter in your document
+````markdown
+```{pythontutor}
+def foo(x, y):
+    if not x:
+        return 0
+    z = x-1
+    return x + foo(z, y)
+```
+````
+
 ## Todo list
 
 - [ ] Fix the strange rendering of arrows
